@@ -1,1 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		var g_new_window = ( -1 );
+	</script>
+</head>
+<body>
+<script type="text/javascript">
+	// This is how to write to the first page
+	document.write( "Content going to the 1st page");
+	// how to create a new window:
+	g_new_window = window.open( "", "", "", "");
 
+	// How to write to the new window:
+	g_new_window.document.write( "This belongs to the second page");
+	// this.style.backgroundColor = "black";
+
+	// if we want to wipe out the content of the 2nd window before writing to it.
+	// let's do this instead
+	g_new_window.document.open();
+
+	g_new_window.document.write( "This should replace the 1st content of our second page");
+
+			g_new_window.document.write( "<table>");
+			g_new_window.document.write( "<tr>");
+			g_new_window.document.write( "<td>");
+			g_new_window.document.write( "</td>");
+			g_new_window.document.write( "<td>");
+			g_new_window.document.write( "</td>");
+			g_new_window.document.write( "<td>");
+			g_new_window.document.write( "</td>");
+			g_new_window.document.write( "</tr>");
+			g_new_window.document.write( "<tr>");
+			g_new_window.document.write( "<table>");
+
+			<table>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+
+	
+	
+</script>
+			<!-- Let's learn how to genarate a 2 by 3 table -->
+<!--			<table>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+</body>
+</html>
