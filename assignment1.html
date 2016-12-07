@@ -1,1 +1,101 @@
+<!DOCTYPE html>
 
+<html>
+
+<head>
+
+	<title></title>
+
+</head>
+
+<body>
+
+
+
+	<script type="text/javascript">
+
+
+
+		//First we check that we never created a cookie before
+
+		if( !document.cookie ) {
+
+			var newDate = new newDate();
+
+			newDate.setFullYear( newDate.getFullYear() + 1 );
+
+			document.write( "The expiration newDate is " + newDate + "<br/>");
+
+
+
+			//Creation of the cookie with seperate name-value pairs
+
+			document.cookie = "week1Ch9=A";
+
+			document.cookie = "numberVisits=1";
+
+			document.cookie = "expires=" + newDate.toUTCString();
+
+			document.write( "Welcome - This is the first time you are visiting this webpage <br/>");
+
+		} 
+
+
+
+		else { //We have already created a cookie for this page
+
+			var String = decodeURIComponent( document.cookie );
+
+			document.write( "The value of the cookie is = " + String + "<br/>" )
+
+			var dataArray = String.split("; ");
+
+						var numberOfVisits;
+
+			for (var count = 0; count < 3; ++count) {
+
+				numberOfVisits = dataArray[count];
+
+				if (numberOfVisits.substring(0,numberOfVisits.indexOf("="))
+
+					== "numberVisits") {
+
+					document.writeln("<p>Your number of visits is "
+
+						+ numberOfVisits.substring(numberOfVisits.indexOf("=")+ 1,
+
+						numberOfVisits.length)) + "</p><br/>";
+
+				var intextForm = numberOfVisits.substring(numberOfVisits.indexOf("=")+ 1,numberOfVisits.length);
+
+					}
+
+				}
+
+			}
+
+		var numInterger = parseInt(intextForm);
+
+		++numInterger;
+
+
+
+
+
+
+
+		var numElements = dataArray.length;
+
+		document.cookie = "numberVisits=" + encodeURIComponent(numInterger);
+
+
+
+		document.write( "<p>The number of tokens inside the cookie is = " + numElements + "</p><br/>");
+
+			
+
+	</script>
+
+</body>
+
+</html>
